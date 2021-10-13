@@ -11,6 +11,7 @@ class MainPage(BasePage):
      def should_be_login_link(self):
          assert self.is_element_present(*MainPageLocators.LOGIN_LINK), "Login link is not presented"
 
+         #is_element_present inherit from BasePgae
          #LOGIN_LINK = (By.CSS_SELECTOR, "#login_link") - кортеж, содержащий два значения
          #мы его передаем в is_element_present(), который содержит find_element().
          #метод find_element() принимает два значения: как искать? (By.CSS_SELECTOR) и что искать? ("#login_link")
