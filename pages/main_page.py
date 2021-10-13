@@ -5,8 +5,10 @@ from .locators import MainPageLocators
 
 class MainPage(BasePage):
      def go_to_login_page(self):
-         login_link = self.browser.find_element(*MainPageLocators.LOGIN_LINK)
-         login_link.click()
+         login_link = self.browser.find_element(*MainPageLocators.LOGIN_LINK) #Один агрумент - пара, которую мы распакуем с помощью звездочки и превратим в два объекта
+         login_link.click()                                                   #когда передаем пару со звездочкой, она превращается в эти самые 2 аргумента
+
+
 
      def should_be_login_link(self):
          assert self.is_element_present(*MainPageLocators.LOGIN_LINK), "Login link is not presented"
