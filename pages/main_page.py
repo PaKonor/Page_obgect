@@ -8,8 +8,8 @@ class MainPage(BasePage):
      def go_to_login_page(self):
          login_link = self.browser.find_element(*MainPageLocators.LOGIN_LINK) #Один агрумент - пара, которую мы распакуем с помощью звездочки и превратим в два объекта
          login_link.click()                                                   #когда передаем пару со звездочкой, она превращается в эти самые 2 аргумента
-         alert = self.browser.switch_to.alert
-         alert.accept()
+         # alert = self.browser.switch_to.alert
+         # alert.accept()
    #1ый способ      #return LoginPage(browser=self.browser, url=self.browser.current_url) #в методе, который осуществляет переход к странице логина, проинициализировать новый объект Page и вернуть его
 
 
