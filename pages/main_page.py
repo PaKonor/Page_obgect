@@ -1,13 +1,14 @@
 from .base_page import BasePage
 from selenium.webdriver.common.by import By
 from .locators import MainPageLocators
+from .login_page import LoginPage
 
 
 class MainPage(BasePage):
      def go_to_login_page(self):
          login_link = self.browser.find_element(*MainPageLocators.LOGIN_LINK) #Один агрумент - пара, которую мы распакуем с помощью звездочки и превратим в два объекта
          login_link.click()                                                   #когда передаем пару со звездочкой, она превращается в эти самые 2 аргумента
-
+   #1ый способ      #return LoginPage(browser=self.browser, url=self.browser.current_url) #в методе, который осуществляет переход к странице логина, проинициализировать новый объект Page и вернуть его
 
 
      def should_be_login_link(self):
